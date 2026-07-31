@@ -5,6 +5,7 @@ class Solution:
         rev = xs[::-1]
         if xs == rev:
             return True
+
         else:
             return False
 
