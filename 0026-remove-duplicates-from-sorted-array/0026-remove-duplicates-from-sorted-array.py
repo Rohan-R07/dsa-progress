@@ -8,14 +8,7 @@ class Solution:
             else:
                 seen.add(nums[i])
         
-        for k in duplicate:
-            nums.remove(k)
+        for k in range(len(duplicate)):
+            nums.remove(duplicate[k])
         return len(nums)
-
-        # for i in range(len(nums)):
-        #     if nums[i] not in seen:
-        #         seen.append(nums[i])
-            
-
-        # print(seen)
-        # return 0
+        
