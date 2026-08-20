@@ -3,7 +3,7 @@ class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         hashset = set(nums)
         lens = len(nums)
-        for i in range(0,lens):
+        for i in range(0,len(nums)):
             
             if nums[i] == target:
                 return i
