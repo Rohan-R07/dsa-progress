@@ -4,5 +4,6 @@ class Solution:
         Do not return anything, modify s in-place instead.
         """
         tempStr = s.copy()
-        for i in range(len(tempStr)):
-            s[i] = tempStr[len(s)-i-1]
+        n = len(tempStr)
+        for i in range(n):
+            s[i] = tempStr[n-i-1]
