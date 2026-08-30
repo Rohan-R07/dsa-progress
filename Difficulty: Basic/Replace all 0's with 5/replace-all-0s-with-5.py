@@ -1,6 +1,5 @@
 class Solution:
     def convertFive(self, n):
-        # code her e
         digit = list(str(n))
         stringbud = ""
         for i in range(len(digit)):
@@ -11,3 +10,13 @@ class Solution:
                 stringbud += digit[i]
                 
         return int(stringbud)
+        
+        
+        # rev = 0
+        # while n>0:
+        #     lastDig = n%10
+        #     if lastDig == 0:
+        #         lastDig = 5
+        #     rev = (rev*10) + lastDig
+            
+        # return rev
