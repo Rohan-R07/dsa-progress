@@ -1,16 +1,16 @@
-
+from collections import Counter
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         
-        frequencyRansom = {}
+        frequencyRansom = Counter(ransomNote)
 
-        for i in range(len(ransomNote)):
-            frequencyRansom[ransomNote[i]] = frequencyRansom.get(ransomNote[i],0)+1
+        # for i in range(len(ransomNote)):
+        #     frequencyRansom[ransomNote[i]] = frequencyRansom.get(ransomNote[i],0)+1
 
-        frequencyRansom1 = {}
+        frequencyRansom1 = Counter(magazine)
 
-        for i in range(len(magazine)):
-            frequencyRansom1[magazine[i]] = frequencyRansom1.get(magazine[i],0)+1
+        # for i in range(len(magazine)):
+        #     frequencyRansom1[magazine[i]] = frequencyRansom1.get(magazine[i],0)+1
         
         for i in frequencyRansom:
             if i not in frequencyRansom1:
