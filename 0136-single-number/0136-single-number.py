@@ -2,19 +2,24 @@ class Solution:
     def singleNumber(self, nums: List[int]) -> int:
 
         seen = []
-        duplicates = []
+        # duplicates = []
 
-        for num in nums:
-            if num in seen:
-                if num not in duplicates:
-                    duplicates.append(num)
-            else:
-                seen.append(num)
+        # for num in nums:
+        #     if num in seen:
+        #         if num not in duplicates:
+        #             duplicates.append(num)
+        #     else:
+        #         seen.append(num)
 
                 
-        temp =0
-        for i in nums:
-            if i not in duplicates:
-                temp = i
+        # temp =0
+        # for i in nums:
+        #     if i not in duplicates:
+        #         temp = i
             
-        return temp
+        # return temp
+        xorSum = 0
+        for i in range(len(nums)):
+            xorSum ^= nums[i]
+
+        return xorSum
