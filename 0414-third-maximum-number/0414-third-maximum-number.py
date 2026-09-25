@@ -2,20 +2,24 @@ class Solution:
     def thirdMax(self, nums: list[int]) -> int:
         
 
-        seen = []
-        duplicate = []
-        for i in range(len(nums)):
-            if nums[i] in seen:
-                duplicate.append(nums[i])
-            else:
-                seen.append(nums[i])
+        # duplicate = []
+        # # for i in range(len(nums)):
+        # #     if nums[i] in seen:
+        # #         duplicate.append(nums[i])
+        # #     else:
+        # #         seen.append(nums[i])
         
-        
-        seen.sort()
-        print(seen)
 
-        if len(seen) < 3:
-            return max(seen)
+        # nums.sort()
+        # removeDup = set(sorted(nums))
+        # removedList = list(removeDup)
+
+        hashing = set(nums)
+
+        newList = list(hashing)
+        newList.sort()
+        if len(newList) < 3:
+            return max(newList)
         
-        return seen[-3]
+        return newList[-3]
         
