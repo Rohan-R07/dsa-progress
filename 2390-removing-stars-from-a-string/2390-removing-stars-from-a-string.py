@@ -9,8 +9,6 @@ class Solution:
 
             if i == "*":
                 stack.pop()
-        result = ""
-        for i in stack:
-            result += i
+        
 
-        return result
+        return "".join(stack)
