@@ -1,13 +1,11 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
 
-        string = s.strip().lower()
+        
         newString = ""
-        for i in string:
+        for i in s.strip().lower():
             if i.isalnum():
                 newString += i
-            
-
         left = 0
         right = len(newString) - 1
         while left < right:
