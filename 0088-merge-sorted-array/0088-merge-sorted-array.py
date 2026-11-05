@@ -4,26 +4,29 @@ class Solution:
         
         left = nums1[:m]
         right = nums2[:n]
-        i,j = 0,0
-        ln,rn = len(left),len(right)
-        nums1.clear()
-        result = []
+        nums1.clear() 
 
-        while i < ln and j < rn:
-            if left[i] <= right[j]:
-                nums1.append(left[i])
-                i+= 1
+        nl ,rl = len(left),len(right)
+        
+        leftP,rightP = 0,0
+        while leftP < nl and rightP < rl:
+            if left[leftP] <= right[rightP]:
+                nums1.append(left[leftP])
+                leftP += 1
 
             else:
-                nums1.append(right[j])
-                j += 1
+                nums1.append(right[rightP])
+                rightP += 1
 
-        if i < ln:
-            while i < ln:
-                nums1.append(left[i])
-                i += 1
 
-        if j < rn :
-            while j < rn:
-                nums1.append(right[j])
-                j += 1
+        if leftP < nl:
+            while leftP <nl:
+                nums1.append(left[leftP])
+                leftP += 1
+
+        if rightP < rl:
+            while rightP < rl:
+                nums1.append(right[rightP])
+                rightP += 1
+
+
