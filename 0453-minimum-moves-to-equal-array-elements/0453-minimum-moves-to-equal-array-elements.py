@@ -3,23 +3,23 @@ class Solution:
 
         #minium approach
 
-        # minium = min(nums)
-
-        # counter = 0
-        # for i in range(len(nums)):
-        #     counter += nums[i] - minium
-
-        # return counter
-
-        #maxium number approach
-
-        maxium = min(nums)
+        minium = min(nums)
 
         counter = 0
         for i in range(len(nums)):
-            if nums[i] != maxium: 
-                counter += maxium - nums[i]
+            counter += nums[i] - minium
 
-        return abs(counter)
+        return counter
+
+        #maxium number approach
+
+        # maxium = min(nums)
+
+        # counter = 0
+        # for i in range(len(nums)):
+        #     if nums[i] != maxium: 
+        #         counter += maxium - nums[i]
+
+        # return abs(counter)
 
         
