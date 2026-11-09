@@ -6,7 +6,7 @@ class Solution:
         for i in range(n):
 
             if s[i] == "i":
-                result.reverse()
+                result = result[::-1]
 
             else:
                 result.append(s[i])
