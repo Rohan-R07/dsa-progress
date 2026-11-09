@@ -3,13 +3,13 @@ class Solution:
 
         result = []
         n = len(s)
-        for i in range(n):
+        for char in s:
 
-            if s[i] == "i":
+            if char == "i":
                 result = result[::-1]
 
             else:
-                result.append(s[i])
+                result.append(char)
 
 
         return "".join(result)
